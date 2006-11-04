@@ -312,7 +312,7 @@ static NSString *kModuleName = @"org.metastatic.Interaggregate2";
 	[defaults setFloat: discVelocity forKey: DISC_VELOCITY_KEY];
 	[defaults setInteger: discSize forKey: DISC_SIZE_KEY];
 	[defaults synchronize];
-  NSColor *color = [colorWell color];
+  NSColor *color = [[colorWell color] colorUsingColorSpaceName: NSCalibratedRGBColorSpace];
   [defaults setFloat: [color redComponent] forKey: BGCOLOR_RED_KEY];
   [defaults setFloat: [color greenComponent] forKey: BGCOLOR_GREEN_KEY];
   [defaults setFloat: [color blueComponent] forKey: BGCOLOR_BLUE_KEY];
